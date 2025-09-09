@@ -73,7 +73,7 @@ const displayAllPlants = (plants) => {
     allPlantsContainer.appendChild(divEle);
     const cartAddBtns = divEle.querySelector(".add-btn");
     const cardContainer = document.getElementById("card-container");
-    // cardContainer.innerHTML = "";
+    cardContainer.innerHTML = "";
     cartAddBtns.addEventListener("click", function () {
       const divElem = document.createElement("div");
       divElem.innerHTML = `
@@ -88,32 +88,21 @@ const displayAllPlants = (plants) => {
 
       cardContainer.append(divElem);
 
-      // const price = document.getElementById(`price-${plant.id}`).innerText;
-      // const totalPrice = document.getElementById("total-price").innerText;
-      // let currentTotalPrice = Number(price) + Number(totalPrice);
-      // document.getElementById("total-price").innerText = currentTotalPrice;
-
-      // document.querySelector(".remove-btn").addEventListener("click", function () {
-      //   divElem.remove();
-      //   let currentTotalPrice = Number(totalPrice) - Number(price);
-      //   document.getElementById("total-price").innerText = currentTotalPrice;
-      // });
-
-
       let total = Number(document.getElementById("total-price").innerText);
-      total = total + Number(plant.price)
+      total = total + Number(plant.price);
       document.getElementById("total-price").innerText = total;
 
-
       const removeBtn = divElem.querySelector(".remove-btn");
-      removeBtn.addEventListener("click", function() {
-        divElem.remove()
+      removeBtn.addEventListener("click", function () {
+        divElem.remove();
 
-        let total = Number(document.getElementById("total-price").innerText)
-        total = total - Number(plant.price)
-        document.getElementById("total-price").innerText = total
-      })
+        let total = Number(document.getElementById("total-price").innerText);
+        total = total - Number(plant.price);
+        document.getElementById("total-price").innerText = total;
 
+      });
+
+      alert(`${plant.name} has been added to the cart.`);
     });
   });
 };
