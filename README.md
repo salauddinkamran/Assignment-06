@@ -1,0 +1,5 @@
+1. the differences between let , var , and const are: var is function-scoped, let and const are block-scoped.
+2. map(), forEach(), and filter() are all JavaScript array methods used to iterate over and operate on array elements, but they have distinct purposes, return values, and behaviors.
+3. Arrow functions are a new way to write functions in JavaScript, introduced in ECMAScript 2015 (ES6). They offer a more concise syntax compared to traditional function expressions and have different behavior regarding the this keyword.
+4. Destructuring assignment in ES6 is a JavaScript expression that allows for unpacking values from arrays or properties from objects into distinct variables. This feature simplifies the process of extracting data from complex data structures, making code more concise and readable. 
+5. Template literals, introduced in ECMAScript 2015 (ES6), provide a more flexible and readable way to create strings in JavaScript compared to traditional string concatenation.
