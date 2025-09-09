@@ -42,13 +42,17 @@ const displayPlantDetails = (plants) => {
         <div class="space-y-2">
           <h2 class="text-lg font-semibold">${plants.name}</h2>
           <img class="rounded-md h-[250px] w-full object-cover" src="${plants.image}" alt="">
-          <p class="font-semibold">Category: <span class="font-normal text-gray-700
+          <p class="font-semibold">Category: <span class="font-normal text-gray-700">${plants.category}</span></p>
+
           <p class="font-semibold"><i class="fa-solid fa-bangladeshi-taka-sign"></i> Price: <span class="font-normal text-gray-700">${plants.price}</span></p>
+          
           <p class="font-semibold">Description: <span class="font-normal text-gray-700">${plants.description}</span></p>
         </div>
   `;
   document.getElementById("plant_modal").showModal();
 };
+
+
 
 const displayAllPlants = (plants) => {
   const allPlantsContainer = document.getElementById("all-plants-container");
